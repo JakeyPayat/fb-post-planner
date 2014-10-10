@@ -42,8 +42,8 @@ class MainHandler(webapp2.RequestHandler):
                 };
         form_data = urllib.urlencode(data)
         url = "https://graph.facebook.com/v2.1/me/feed"
-        result = urlfetch.fetch(url=url,payload=form_data,method=urlfetch.POST,headers={'Content-Type': 'application/x-www-form-urlencoded'})
-        self.redirect("/")
+        result = urlfetch.fetch(url=url,payload=form_data,method=urlfetch.POST)
+        content = json.loads(result.content)
         
         
 application = webapp2.WSGIApplication([
