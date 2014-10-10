@@ -16,8 +16,15 @@ import sched
 import time
 import threading
 
+
+
+
+
 FACEBOOK_APP_ID = "744172605629779"
 FACEBOOK_APP_SECRET = "8fdb7fa459caac92022916cbeb6ac56f"
+GRAPH_API_URL ="https://graph.facebook.com/v2.1"
+
+
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
